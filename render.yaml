@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: springboot-backend
+    env: java
+    buildCommand: "./mvnw clean package"
+    startCommand: "java -jar target/prueba-fs-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://crossover.proxy.rlwy.net:17307/railway?allowPublicKeyRetrieval=true&useSSL=false
+      - key: SPRING_DATASOURCE_USERNAME
+        value: root
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: KVUcZZrAuknYLGmcVqBiRUmOHObrTleX
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: none
